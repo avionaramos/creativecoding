@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js" defer></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #gameContainer {
+            position: relative;
+        }
+        
+        #gameOver {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #361A01;
+            padding: 20px;
+            border-radius: 10px;
+            align-items: center;
+            justify-content: center;
+            display: none;
+            text-align: center;
+        }
+
+        #button {
+            color: #673300;
+            border: 1px solid black;
+            background-color: transparent;
+            padding: 10px 10px;
+            cursor: pointer;
+        }
+
+        #button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer"></div>
+    <div id="gameOver">
+        <h2>Game Over</h2>
+        <button onclick="restartGame()" id="button">Start Again</button>
+    </div>
+</body>
+</html>
